@@ -1,9 +1,19 @@
 import logo from '../assets/logo.svg'
 import ham from '../assets/icon-hamburger.svg'
+import React, { useState } from 'react';
+
+const NavB = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleNav = () => {
+    setIsOpen(!isOpen);
+  };
+
+
   return (
     <nav>
     <div className='na'>
-        <img src={logo} alt="logo" />
+        <img className='navy' onClick={toggleNav} src={logo} alt="logo" />
       <ul>
         <li>Features</li>
         <li>Pricing</li>
