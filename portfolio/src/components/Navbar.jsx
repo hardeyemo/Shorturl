@@ -1,31 +1,44 @@
 import logo from '../assets/logo.svg'
 import ham from '../assets/icon-hamburger.svg'
-import React, { useState } from 'react';
+import { IoMenuOutline } from "react-icons/io5";
+import { MdClose } from "react-icons/md";
+import { useState } from 'react';
 
-const NavB = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggleNav = () => {
-    setIsOpen(!isOpen);
-  };
-
+function Navbar(){
+    const [bar, setBar] = useState(false)
+    function menuBar() {
+        setBar(!bar)
+    }
 
   return (
     <nav>
-    <div className='na'>
-        <img className='navy' onClick={toggleNav} src={logo} alt="logo" />
+       <div className='fle'>
+       <img src={logo} alt="" />
+      <div className='na'>
       <ul>
         <li>Features</li>
         <li>Pricing</li>
         <li>Resources</li>
       </ul>
-    </div>
-        <img className='naim'/>
       <div className='nav-down'>
         <p>Login</p>
         <button>Sign Up</button>
       </div>
+      </div>
+      <div onClick={menuBar} className='menuu'>
+      {bar ? <MdClose />  : <IoMenuOutline />}
+      </div>
+       </div>
+      {bar && <div className='show'>
+      <ul className='sh'>
+        <li>Features</li>
+        <li>Pricing</li>
+        <li>Resources</li>
+        <p>Login</p>
+        <button>Sign Up</button>
+      </ul>
+      </div>}
     </nav>
   )
-
+}
 export default Navbar

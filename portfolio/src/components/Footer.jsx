@@ -1,4 +1,4 @@
-import foot from '../assets/logo.svg'
+
 import face from '../assets/icon-facebook.svg'
 import twit from '../assets/icon-twitter.svg'
 import pin from '../assets/icon-pinterest.svg'
@@ -6,7 +6,7 @@ import ins from '../assets/icon-instagram.svg'
 const Footer = () => {
   return (
     <footer>
-      <div><img src={foot} alt="foot" /></div>
+      <h1>SHORTLY</h1>
       <div className='feat'>
         <h1>Features</h1>
         <p>Link Shortening</p>

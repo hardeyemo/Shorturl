@@ -8,9 +8,21 @@ nav{
   justify-content: space-between;
   padding: 20px 80px;
   font-size: 20px;
+  width: 100%;
 }
-.naim{
-  display: none;
+.fle{
+  display: flex;
+  align-items: center;
+  gap: 190%;
+}
+.link{
+  background-color: white;
+  color: blue;
+  width: 20vw;
+  border-radius: 20px;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: center;
 }
 li{
   cursor: pointer;
@@ -21,24 +33,31 @@ ul{
   gap: 30px;
   color: gray;
 }
+li:hover{
+  color: black;
+}
 .na{
   display: flex;
   align-items: center;
   gap: 30px;
 }
-nav p{
+  nav p{
 color: gray;
 cursor: pointer;
 }
+nav p:hover{
+  color: black;
+}
 nav button{
-  padding: 10px 15px;
   background-color: gray;
   color: white;
   border-radius: 20px;
   cursor: pointer;
   border: none;
   font-size: 15px;
+  padding: 8px 30px;
 }
+
 .nav-down{
   display: flex;
   align-items: center;
@@ -48,7 +67,7 @@ nav button{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 80px;
+  padding: 30px 80px;
 }
 .left{
   display: flex;
@@ -83,12 +102,12 @@ nav button{
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* height: 60vh; */
   gap: 30px;
 }
 .sec1{
   display: flex;
   align-items: center;
+  justify-content: center;
   background-image: url(../src/assets/bg-boost-desktop.svg);
   background-repeat: repeat;
   background-position: center;
@@ -99,13 +118,14 @@ nav button{
   gap: 20px;
   position: relative;
   bottom: 60px;
+  width: 80%;
 }
 input{
   height: 40px;
   border-radius: 10px;
   border: none;
   outline: none;
-  width: 30vw;
+  width: 60vw;
   padding: 0px 20px;
   color: gray;
 }
@@ -136,10 +156,9 @@ input{
 .down{
   display: flex;
   align-items: center;
-  gap: 20vw;
+  gap: 130px;
+  padding: 90px;
   color: gray;
-  /* margin-top: 60px; */
-  /* height: 10vh; */
 }
 .down p{
   width: 13vw;
@@ -205,6 +224,7 @@ footer{
   color: white;
   height: 30vh;
 }
+
 .social{
   display: flex;
   gap: 10px;
@@ -217,25 +237,67 @@ footer .feat, .res, .com{
  footer p{
   color: rgb(176, 167, 167);
  }
+ .menuu{
+  display: none;
+ }
+ .show{
+  display: none;
+ }
 
  @media screen and (max-width: 960px) {
 
+  .menuu{
+    display: flex;
+    font-size: 30px;
+  }
+  .sh{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    left: 0;
+    background-color: gray;
+    /* opacity: 0.5; */
+    border-radius: 20px;
+    color: white;
+    font-size: 25px;
+    padding: 20px 0px;
+    margin: 20px;
+  }
+  .sh p{
+    color: white;
+  }
+  .sh button{
+    background-color: blueviolet;
+    height: 50px;
+    width: 80%;
+    font-size: 22px;
+  }
     .nav-down {
       display: none;
+    }
+    .fle{
+      display: flex;
+      gap: 100px;
     }
     ul{
       display: none;
     }
-    .naim{
-      display: flex;
-    }
     nav{
       justify-content: space-between;
       align-items: center;
+      flex-direction: column;
       padding: 20px;
+      width: 100%;
     }
+  .show{
+    display: flex;
+    color: black;
+  }
     .herro{
         flex-direction: column-reverse;
+        padding: 0px;
     }
     .herro img{
       width: 80vw;
@@ -256,12 +318,10 @@ footer .feat, .res, .com{
     }
     .sec1{
       flex-direction: column;
-      padding: 20px 60px;
-      position: relative;
-      bottom: 140px;
+      width: 90vw;
     }
     .sec1 input, button{
-      width: 160%;
+      width: 80vw;
     }
     .sec2{
       position: relative;
@@ -279,6 +339,7 @@ footer .feat, .res, .com{
       gap: 50px;
       position: relative;
       bottom: 50px;
+      padding: 0px;
     }
     .down2 button{
       width: 50%;
@@ -296,8 +357,14 @@ footer .feat, .res, .com{
       flex-direction: column;
       justify-content: center;
       text-align: center;
-      gap: 10px;
+      gap: 20px;
       height: 85vh;
+    }
+    .link{
+      position: relative;
+      bottom: 70px;
+      width: 90vw;
+      border-radius: 10px;
     }
     
 
