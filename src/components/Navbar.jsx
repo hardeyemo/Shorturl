@@ -29,15 +29,14 @@ function Navbar(){
       {bar ? <MdClose />  : <IoMenuOutline />}
       </div>
        </div>
-      {bar && <div className='show'>
-      <ul className='sh'>
-        <li>Features</li>
-        <li>Pricing</li>
-        <li>Resources</li>
+
+      <div className={bar ? "sh" : 'show2'}>
+        <p>Features</p>
+        <p>Pricing</p>
+        <p>Resources</p>
         <p>Login</p>
         <button>Sign Up</button>
-      </ul>
-      </div>}
+      </div>
     </nav>
   )
 }
