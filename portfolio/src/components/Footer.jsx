@@ -5,6 +5,7 @@ import pin from '../assets/icon-pinterest.svg'
 import ins from '../assets/icon-instagram.svg'
 const Footer = () => {
   return (
+
     <footer>
       <h1>SHORTLY</h1>
       <div className='feat'>
